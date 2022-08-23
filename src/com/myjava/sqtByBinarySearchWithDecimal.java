@@ -2,12 +2,24 @@ package com.myjava;
 
 import java.util.Scanner;
 
-public class leetcode69 {
+public class sqtByBinarySearchWithDecimal {
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
+        System.out.println("Enter number :");
         int x=scan.nextInt();
-        System.out.println(sqt(x));
+        System.out.println(sqtAfterDecimal(x,3,sqt(x)));
 
+    }
+    public static double sqtAfterDecimal(int x,int l,int temp){
+        double ans=temp;
+        double fact=1;
+        for(int i=0;i<l;i++){
+            fact=fact/10;
+            for(double j=ans;j*j<x;j=j+fact){
+                ans=j;
+            }
+        }
+        return ans;
 
     }
     public static int sqt(int x){
@@ -33,4 +45,5 @@ public class leetcode69 {
             return end;
         }
     }
+
 }
