@@ -21,7 +21,7 @@ public class selectionSort {
         for(int i=0;i<n-1;i++){
             int c=i;
             for(int j=i+1;j<n;j++){
-                if(arr[i]>arr[j]){
+                if(arr[c]>arr[j]){
                     c=j;
                 }
             }
