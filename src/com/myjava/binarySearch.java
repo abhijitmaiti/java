@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class binarySearch {
     public static void main(String []args){
         Scanner scan=new Scanner (System.in);
+        Sytem.out.print("Enter number of element :")
         int n=scan.nextInt();
         int []arr=new int [n];
+        System.out.print("Enter element in array : ")
         for(int i=0;i<n;i++){
             arr[i]=scan.nextInt();
         }
